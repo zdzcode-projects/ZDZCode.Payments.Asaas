@@ -1,3 +1,5 @@
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License. Full text of the license can be found at: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
 Attribution-NonCommercial 4.0 International
 
 =======================================================================
