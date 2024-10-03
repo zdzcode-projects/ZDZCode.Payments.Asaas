@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      <TargetFrameworks>net8.0</TargetFrameworks>
+      <Version>8.0.0</Version>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Copyright>ZDZCode</Copyright>
+      <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+      <Company>ZDZCode Tecnologia da Informação Ltda</Company>
+  </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Hangfire.Core" Version="1.8.12" />
+        <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+        <PackageReference Include="ZDZCode.ExternalServices" Version="8.0.0.20484" />
+
+        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.*" Condition="'$(TargetFramework)' == 'net6.0'" />
+        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.*" Condition="'$(TargetFramework)' == 'net7.0'" />
+
+        <PackageReference Include="System.Drawing.Common" Version="6.*" Condition="'$(TargetFramework)' == 'net6.0'" />
+        <PackageReference Include="System.Drawing.Common" Version="7.*" Condition="'$(TargetFramework)' == 'net7.0'" />
+    </ItemGroup>
+</Project>

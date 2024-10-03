@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZDZCode.Payments.Asaas", "ZDZCode.Payments.Asaas\ZDZCode.Payments.Asaas.csproj", "{779910FA-4A16-4A3B-B7DC-8FD503DC6E7B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZDZCode.Payments.Asaas.Tests", "ZDZCode.Payments.Asaas.Tests\ZDZCode.Payments.Asaas.Tests.csproj", "{07614C89-BBF9-4A02-8DCF-882B6E507785}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{779910FA-4A16-4A3B-B7DC-8FD503DC6E7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{779910FA-4A16-4A3B-B7DC-8FD503DC6E7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{779910FA-4A16-4A3B-B7DC-8FD503DC6E7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{779910FA-4A16-4A3B-B7DC-8FD503DC6E7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07614C89-BBF9-4A02-8DCF-882B6E507785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07614C89-BBF9-4A02-8DCF-882B6E507785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07614C89-BBF9-4A02-8DCF-882B6E507785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07614C89-BBF9-4A02-8DCF-882B6E507785}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEE419A2-08A3-4B03-ABA7-A0C1D2FE967C}
+	EndGlobalSection
+EndGlobal
