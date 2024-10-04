@@ -13,5 +13,13 @@ namespace ZDZCode.Payments.Asaas.Tests
 
             result.Should().NotBeNull();
         }
+
+        [Fact]
+        public async Task GetMyAccountAccountNumber()
+        {
+
+            var result = await _asaasService.GetMyAccountAccountNumber();
+            result.Should().NotBeNull();
+        }
     }
 }
