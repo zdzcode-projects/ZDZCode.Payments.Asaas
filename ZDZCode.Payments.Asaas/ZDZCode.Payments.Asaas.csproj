@@ -7,7 +7,18 @@
       <Copyright>ZDZCode</Copyright>
       <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
       <Company>ZDZCode Tecnologia da Informação Ltda</Company>
+      <PackageTags>ZDZCode</PackageTags>
+      <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+      <Authors>ZDZCode</Authors>
+      <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
+    <ItemGroup>
+        <None Include="..\LICENSE.md" Pack="true" PackagePath="" />
+        <None Include="..\logo.png">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Hangfire.Core" Version="1.8.12" />
         <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
