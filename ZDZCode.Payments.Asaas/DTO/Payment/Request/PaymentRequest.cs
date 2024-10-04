@@ -20,6 +20,7 @@ namespace ZDZCode.Payments.Asaas.DTO.Payment.Request
         public Fine Fine { get; set; }
         public bool PostalService { get; set; }
         public IEnumerable<Split> Split { get; set; }
+        public Callback CallBack { get; set; }
 
     }
 }
