@@ -2,9 +2,9 @@
 
 namespace ZDZCode.Payments.Asaas.DTO.Customer.Response
 {
-    public class CustomersResponse
+    public class CustomerResponse
     {
-        public string Object { get; set; } = "customer";
+        public string Object { get; set; }
         public string Id { get; set; }
         public DateTime DateCreated { get; set; }
         public string Name { get; set; }
@@ -21,8 +21,8 @@ namespace ZDZCode.Payments.Asaas.DTO.Customer.Response
         public string Country { get; set; }
         public string PostalCode { get; set; }
         public string CpfCnpj { get; set; }
-        public PersonType PersonType { get; set; }
-        public bool Deleted { get; set; }
+        public string PersonType { get; set; }
+        public bool? Deleted { get; set; }
         public string AdditionalEmails { get; set; }
         public string ExternalReference { get; set; }
         public bool NotificationDisabled { get; set; }

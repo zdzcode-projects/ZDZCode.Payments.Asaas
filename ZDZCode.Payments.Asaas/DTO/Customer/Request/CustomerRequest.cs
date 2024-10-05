@@ -13,10 +13,10 @@
         public string Province { get; set; }
         public string PostalCode { get; set; }
         public string ExternalReference { get; set; }
-        public bool NotificationDisabled { get; set; }
+        public bool? NotificationDisabled { get; set; }
         public string AdditionalEmails { get; set; }
         public string MunicipalInscription { get; set; }
-        public string StateInInscription { get; set; }
+        public string StateInscription { get; set; }
         public string Observations { get; set; }
         public string GroupName { get; set; }
         public string Company { get; set; }
