@@ -21,5 +21,13 @@ namespace ZDZCode.Payments.Asaas.Tests
 
             result.Should().NotBeNull();
         }
+
+        [Fact]
+        public async Task GetRetrieveBusinessData()
+        {
+            var result = await _asaasService.GetRetrieveBusinessDataResponse();
+
+            result.Should().NotBeNull();
+        }
     }
 }

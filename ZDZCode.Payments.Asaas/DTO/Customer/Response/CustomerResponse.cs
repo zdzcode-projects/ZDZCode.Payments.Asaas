@@ -1,6 +1,4 @@
-﻿using ZDZCode.Payments.Asaas.Enums;
-
-namespace ZDZCode.Payments.Asaas.DTO.Customer.Response
+﻿namespace ZDZCode.Payments.Asaas.DTO.Customer.Response
 {
     public class CustomerResponse
     {

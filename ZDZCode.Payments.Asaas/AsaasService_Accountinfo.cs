@@ -14,5 +14,10 @@ namespace ZDZCode.Payments.Asaas
         {
             return await GetAsync<RetrieveAsaasAccountNumberResponse>("/myAccount/commercialInfo", request);
         }
+
+        public async Task<RetrieveBusinessDataResponse> GetRetrieveBusinessDataResponse(BaseAsaasRequest request = null)
+        {
+            return await GetAsync<RetrieveBusinessDataResponse>("/myAccount/commercialInfo/", request);
+        }
     }
 }
