@@ -15,6 +15,7 @@ namespace ZDZCode.Payments.Asaas.Tests
         }
 
         [Fact]
+
         public async Task GetMyRetrieveAssasAccountNumber()
         {
             var result = await _asaasService.GetRetrieveAssasAccountNumber();
@@ -27,6 +28,12 @@ namespace ZDZCode.Payments.Asaas.Tests
         {
             var result = await _asaasService.GetRetrieveBusinessDataResponse();
 
+
+        public async Task GetMyAccountAccountNumber()
+        {
+
+            var result = await _asaasService.GetMyAccountAccountNumber();
+ 
             result.Should().NotBeNull();
         }
     }
