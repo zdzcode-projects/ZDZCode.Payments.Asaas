@@ -29,5 +29,10 @@ namespace ZDZCode.Payments.Asaas
         {
             return await GetAsync<CheckAccountRegistrationStatusResponse>("/myAccount/status/", request);
         }
+
+        public async Task<MyAccountAccountNumberResponse> GetMyAccountAccountNumber(BaseAsaasRequest request = null)
+        {
+            return await GetAsync<MyAccountAccountNumberResponse>("/myAccount/accountNumber", request);
+        }
     }
 }
