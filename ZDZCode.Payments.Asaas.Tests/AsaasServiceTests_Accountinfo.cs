@@ -46,5 +46,13 @@ namespace ZDZCode.Payments.Asaas.Tests
 
             result.Should().NotBeNull();
         }
+
+        [Fact]  
+        public async Task GetRetrieveAccountFeesResponse()
+        {
+            var result = await _asaasService.GetRetrieveAccountFeesResponse();
+
+            result.Should().NotBeNull();
+        }
     }
 }
