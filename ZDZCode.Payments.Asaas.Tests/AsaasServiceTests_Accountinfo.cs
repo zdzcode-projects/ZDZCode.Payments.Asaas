@@ -4,8 +4,12 @@ using ZDZCode.Payments.Asaas.Tests.Common;
 
 namespace ZDZCode.Payments.Asaas.Tests
 {
-    public partial class AsaasServiceTests
+    public partial class AsaasServiceTests : BaseAsaasServiceTest
     {
+        public AsaasServiceTests(AsaasService asaasService) : base(asaasService)
+        {
+        }
+
         [Fact]
         public async Task GetMyAccountCommercialInfo()
         {
@@ -28,7 +32,9 @@ namespace ZDZCode.Payments.Asaas.Tests
         {
             var result = await _asaasService.GetRetrieveBusinessDataResponse();
 
+        }
 
+        [Fact]
         public async Task GetMyAccountAccountNumber()
         {
 
@@ -46,18 +52,10 @@ namespace ZDZCode.Payments.Asaas.Tests
         }
 
         [Fact]
-
         public async Task GetCheckAccountRegistrationStatus()
         {
             var result = await _asaasService.GetCheckAccountRegistrationStatus();
 
-
-        public async Task GetMyAccountAccountNumber()
-        {
-
-            var result = await _asaasService.GetMyAccountAccountNumber();
-
-            result.Should().NotBeNull();
         }
 
         [Fact]

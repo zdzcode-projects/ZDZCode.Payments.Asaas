@@ -1,7 +1,6 @@
 ﻿using Azure.Core;
 using ZC.DomainService.HttpClientCore;
 using ZDZCode.Payments.Asaas.DTO.Accountinfo.Response;
-using ZDZCode.Payments.Asaas.DTO.Accountinfo.Response.CommercialInfo;
 using ZDZCode.Payments.Asaas.DTO.Accountinfo.Response.Fees;
 
 namespace ZDZCode.Payments.Asaas
