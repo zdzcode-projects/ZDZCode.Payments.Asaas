@@ -36,5 +36,28 @@ namespace ZDZCode.Payments.Asaas.Tests
  
             result.Should().NotBeNull();
         }
+
+        [Fact]
+        public async Task GetRetrievePersonalizationSettings()
+        {    
+            var result = await _asaasService.GetRetrievePersonalizationSettingsResponse();
+
+            result.Should().NotBeNull();
+        }
+
+        [Fact]
+
+        public async Task GetCheckAccountRegistrationStatus()
+        {
+            var result = await _asaasService.GetCheckAccountRegistrationStatus();
+
+
+        public async Task GetMyAccountAccountNumber()
+        {
+
+            var result = await _asaasService.GetMyAccountAccountNumber();
+
+            result.Should().NotBeNull();
+        }
     }
 }

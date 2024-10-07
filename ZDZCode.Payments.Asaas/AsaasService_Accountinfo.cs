@@ -21,11 +21,19 @@ namespace ZDZCode.Payments.Asaas
             return await GetAsync<RetrieveBusinessDataResponse>("/myAccount/commercialInfo/", request);
         }
 
+        public async Task<RetrievePersonalizationSettingsResponse> GetRetrievePersonalizationSettingsResponse(BaseAsaasRequest request = null)
+        {
+            return await GetAsync<RetrievePersonalizationSettingsResponse>("/myAccount/paymentCheckoutConfig/", request);
+        }
+
+        public async Task<CheckAccountRegistrationStatusResponse> GetCheckAccountRegistrationStatus(BaseAsaasRequest request = null)
+        {
+            return await GetAsync<CheckAccountRegistrationStatusResponse>("/myAccount/status/", request);
+        }
+
         public async Task<MyAccountAccountNumberResponse> GetMyAccountAccountNumber(BaseAsaasRequest request = null)
         {
             return await GetAsync<MyAccountAccountNumberResponse>("/myAccount/accountNumber", request);
         }
-
-
     }
 }
