@@ -14,14 +14,11 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="xunit" Version="2.5.3" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+    <PackageReference Include="ZC.DomainService.HttpClientCore" Version="8.0.0.20482" />
 
       <PackageReference Include="ZC.Tests.Core" Version="8.0.0.19493" />
 
       <PackageReference Include="ZDZCode.Infrastructure" Version="8.0.0.20897" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ZDZCode.Payments.Asaas\ZDZCode.Payments.Asaas.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +28,10 @@
   <ItemGroup>
     <Folder Include="Data\AccountDocument\" />
     <Folder Include="Data\Accountinfo\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ZDZCode.Payments.Asaas\ZDZCode.Payments.Asaas.csproj" />
   </ItemGroup>
 
   <ItemGroup>
