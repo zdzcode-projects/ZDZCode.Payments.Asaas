@@ -59,5 +59,19 @@ namespace ZDZCode.Payments.Asaas.Tests
 
             result.Should().NotBeNull();
         }
+
+        [Fact]
+        public async Task GetMyAccountPaymentCheckoutConfig()
+        {
+            var result = await _asaasService.GetMyAccountPaymentCheckoutConfig();
+            result.Should().NotBeNull();
+        }
+
+        [Fact]
+        public async Task GetMyAccountFees()
+        {
+            var result = await _asaasService.GetMyAccountFees();
+            result.Should().NotBeNull();
+        }
     }
 }
