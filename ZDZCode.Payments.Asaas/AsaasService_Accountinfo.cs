@@ -33,6 +33,11 @@ namespace ZDZCode.Payments.Asaas
             return await GetAsync<CheckAccountRegistrationStatusResponse>("/myAccount/status/", request);
         }
 
+
+        public async Task<RetrieveAccountFeesResponse> GetRetrieveAccountFeesResponse(BaseAsaasRequest request = null)
+        {
+            return await GetAsync<RetrieveAccountFeesResponse>("/myAccount/fees/", request);
+
         public async Task<MyAccountAccountNumberResponse> GetMyAccountAccountNumber(BaseAsaasRequest request = null)
         {
             return await GetAsync<MyAccountAccountNumberResponse>("/myAccount/accountNumber", request);
@@ -41,7 +46,6 @@ namespace ZDZCode.Payments.Asaas
         public async Task<MyAccountPaymentCheckoutConfigResponse> GetMyAccountPaymentCheckoutConfig(BaseAsaasRequest request = null)
         {
             return await GetAsync<MyAccountPaymentCheckoutConfigResponse>("/myAccount/paymentCheckoutConfig", request);
-
         }
 
         public async Task<MyAccountFeesResponse> GetMyAccountFees(BaseAsaasRequest request = null)
