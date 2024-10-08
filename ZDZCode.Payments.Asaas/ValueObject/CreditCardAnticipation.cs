@@ -1,6 +1,6 @@
 ﻿namespace ZDZCode.Payments.Asaas.ValueObject
 {
-    public  record CreditCardAnticipation(decimal DetachedMonthlyFeeValue, 
-        int InstallmentMonthlyFeeValue);
+    public  record CreditCardAnticipation(double DetachedMonthlyFeeValue, 
+        double InstallmentMonthlyFeeValue);
     
 }

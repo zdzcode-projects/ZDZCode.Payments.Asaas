@@ -1,6 +1,6 @@
 ﻿namespace ZDZCode.Payments.Asaas.ValueObject
 {
-    public  class Payment
+    public class Pagamento
     {
         public BankSlip BankSlip { get; set; }
         public CreditCard CreditCard { get; set; }

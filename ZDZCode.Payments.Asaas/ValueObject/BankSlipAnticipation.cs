@@ -4,6 +4,6 @@ namespace ZDZCode.Payments.Asaas.ValueObject
 {
     public class BankSlipAnticipation
     {
-        public decimal MonthlyFeePercentage { get; set; }
+        public double MonthlyFeePercentage { get; set; }
     }
 }
