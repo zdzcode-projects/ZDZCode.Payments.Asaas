@@ -46,7 +46,6 @@ namespace ZDZCode.Payments.Asaas
         public async Task<MyAccountPaymentCheckoutConfigResponse> GetMyAccountPaymentCheckoutConfig(BaseAsaasRequest request = null)
         {
             return await GetAsync<MyAccountPaymentCheckoutConfigResponse>("/myAccount/paymentCheckoutConfig", request);
-
         }
 
         public async Task<MyAccountFeesResponse> GetMyAccountFees(BaseAsaasRequest request = null)
