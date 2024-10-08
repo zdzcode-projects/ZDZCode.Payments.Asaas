@@ -10,5 +10,10 @@ namespace ZDZCode.Payments.Asaas
         {
             return await PostAsync<CreateNewPaymentResponse>("/payments", request);
         }
+
+        public async Task<CreateNewPaymentWithSummaryDataResponse> CreateNewPaymentWithSummaryData(CreateNewPaymentRequest request)
+        {
+            return await PostAsync<CreateNewPaymentWithSummaryDataResponse>("/lean/payments", request);
+        }
     }
 }
