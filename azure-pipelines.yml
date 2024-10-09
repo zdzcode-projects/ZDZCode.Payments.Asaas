@@ -12,6 +12,7 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   csprojPath: 'ZDZCode.Payments.Asaas/ZDZCode.Payments.Asaas.csproj'
+  runTest: true
 
 resources:
   repositories:
