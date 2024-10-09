@@ -3,11 +3,9 @@ using ZDZCode.Payments.Asaas.DTO.Payment.Request;
 
 namespace ZDZCode.Payments.Asaas.Tests
 {
-
     public partial class AsaasServiceTests
     {
         [Fact] 
-
         public void CreateNewPayment()
         {
             var request = _fixture
@@ -30,6 +28,7 @@ namespace ZDZCode.Payments.Asaas.Tests
             var result = _asaasService.CreateNewPaymentWithSummaryData(request);
 
            Assert.NotNull(result);
+
         }
     }
 }

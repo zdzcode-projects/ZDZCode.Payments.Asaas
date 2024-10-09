@@ -1,5 +1,7 @@
-﻿using ZC.DomainService.HttpClientCore;
+﻿using Azure.Core;
+using ZC.DomainService.HttpClientCore;
 using ZDZCode.Payments.Asaas.DTO.Accountinfo.Response;
+using ZDZCode.Payments.Asaas.DTO.Accountinfo.Response.Fees;
 
 namespace ZDZCode.Payments.Asaas
 {
@@ -9,6 +11,7 @@ namespace ZDZCode.Payments.Asaas
         {
             return await GetAsync<MyAccountCommercialInfoResponse>("/myAccount/commercialInfo", request);
         }
+
 
         public async Task<RetrieveAsaasAccountNumberResponse> GetRetrieveAssasAccountNumber(BaseAsaasRequest request = null)
         {
@@ -30,9 +33,26 @@ namespace ZDZCode.Payments.Asaas
             return await GetAsync<CheckAccountRegistrationStatusResponse>("/myAccount/status/", request);
         }
 
+
         public async Task<RetrieveAccountFeesResponse> GetRetrieveAccountFeesResponse(BaseAsaasRequest request = null)
         {
             return await GetAsync<RetrieveAccountFeesResponse>("/myAccount/fees/", request);
+        }
+
+        public async Task<MyAccountAccountNumberResponse> GetMyAccountAccountNumber(BaseAsaasRequest request = null)
+        {
+            return await GetAsync<MyAccountAccountNumberResponse>("/myAccount/accountNumber", request);
+        }
+
+        public async Task<MyAccountPaymentCheckoutConfigResponse> GetMyAccountPaymentCheckoutConfig(BaseAsaasRequest request = null)
+        {
+            return await GetAsync<MyAccountPaymentCheckoutConfigResponse>("/myAccount/paymentCheckoutConfig", request);
+        }
+
+        public async Task<MyAccountFeesResponse> GetMyAccountFees(BaseAsaasRequest request = null)
+        {
+            return await GetAsync<MyAccountFeesResponse>("/myAccount/fees", request);
+
         }
     }
 }
