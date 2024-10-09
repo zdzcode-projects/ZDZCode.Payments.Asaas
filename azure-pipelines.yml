@@ -11,6 +11,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  csprojPath: 'ZDZCode.Payments.Asaas/ZDZCode.Payments.Asaas.csproj'
 
 resources:
   repositories:
@@ -19,5 +20,5 @@ resources:
       name: ZDZCode Architecture and Infrastructure/_git/ZC.AzureDevOps.Script
 
 jobs:
-  - template: AzurePipelines/DotNetPackage/azure-pipelines-public.yml@templates
+  - template: AzurePipelines/DotNetPackage/azure-pipelines-github-public.yml@templates
   #  #  
