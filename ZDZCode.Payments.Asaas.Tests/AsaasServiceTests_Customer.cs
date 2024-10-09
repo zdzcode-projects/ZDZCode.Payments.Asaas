@@ -1,6 +1,9 @@
-﻿using FluentAssertions;
+﻿using AutoFixture;
+using DocumentFormat.OpenXml.Office2010.Excel;
+using FluentAssertions;
 using ZC.DomainService.HttpClientCore;
 using ZDZCode.Payments.Asaas.DTO.Customer.Request;
+using ZDZCode.Payments.Asaas.DTO.Payment.Request;
 
 namespace ZDZCode.Payments.Asaas.Tests
 {
@@ -35,6 +38,70 @@ namespace ZDZCode.Payments.Asaas.Tests
 
             result.Should().Be(result);
         }
+
+        [Fact]
+        public async Task ListCustomers()
+        {
+            var result = await _asaasService.GetListCustomers();
+
+            result.Should().NotBeNull();
+        }
+
+        [Fact]
+        public void GetRetrieveSingleCustomer()
+        {
+            var request = "cus_000006258699";
+
+            var result = _asaasService.GetRetrieveASingleCustomer(request);
+
+            result.Should().NotBeNull();
+        }
+
+        [Fact]
+        public void UpdateExistingCustomer()
+        {
+            var requestId = "cus_000006258699";
+
+            var request = _fixture
+                .Build<CustomerRequest>()
+                .Create();
+
+            var result = _asaasService.UpdateExistingCustomer(requestId, request);
+
+            result.Should().NotBeNull();          
+                
+        }
+
+        [Fact]
+        public void RemoverCustomer()
+        {
+            var request = "cus_000006258699";
+
+            var result = _asaasService.RemoveCustomer(request);
+
+            result.Should().NotBeNull();
+        }
+
+        [Fact]
+        public void RestoreRemovedCustomer()
+        {
+            var request = "cus_000006258699";
+
+            var result = _asaasService.RestoreRemovedCustomer(request);
+
+            result.Should().NotBeNull();
+        }
+
+        [Fact]
+        public void GetRetrieveNotificationsFromACustomerResponse()
+        {
+            var request = "cus_000006258699";
+
+            var result = _asaasService.GetRetrieveNotificationsFromACustomer(request);
+
+            result.Should().NotBeNull();
+        }
+
 
     }
 }

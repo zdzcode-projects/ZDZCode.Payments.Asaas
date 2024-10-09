@@ -1,7 +1,5 @@
 ﻿using AutoFixture;
-using ZC.DomainService.HttpClientCore;
 using ZDZCode.Payments.Asaas.DTO.Payment.Request;
-using ZDZCode.Payments.Asaas.ValueObject;
 
 namespace ZDZCode.Payments.Asaas.Tests
 {
