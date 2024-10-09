@@ -37,6 +37,7 @@ namespace ZDZCode.Payments.Asaas
         public async Task<RetrieveAccountFeesResponse> GetRetrieveAccountFeesResponse(BaseAsaasRequest request = null)
         {
             return await GetAsync<RetrieveAccountFeesResponse>("/myAccount/fees/", request);
+        }
 
         public async Task<MyAccountAccountNumberResponse> GetMyAccountAccountNumber(BaseAsaasRequest request = null)
         {

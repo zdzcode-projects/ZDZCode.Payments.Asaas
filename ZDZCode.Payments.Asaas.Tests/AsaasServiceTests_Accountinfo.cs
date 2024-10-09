@@ -6,10 +6,6 @@ namespace ZDZCode.Payments.Asaas.Tests
 {
     public partial class AsaasServiceTests : BaseAsaasServiceTest
     {
-        public AsaasServiceTests(AsaasService asaasService) : base(asaasService)
-        {
-        }
-
         [Fact]
         public async Task GetMyAccountCommercialInfo()
         {
