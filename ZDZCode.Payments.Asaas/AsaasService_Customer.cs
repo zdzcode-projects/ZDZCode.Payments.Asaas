@@ -1,4 +1,5 @@
 ﻿using ZC.DomainService.HttpClientCore;
+using ZDZCode.Payments.Asaas.Commum;
 using ZDZCode.Payments.Asaas.DTO.Customer.Request;
 using ZDZCode.Payments.Asaas.DTO.Customer.Response;
 using ZDZCode.Payments.Asaas.ValueObject;
@@ -12,9 +13,9 @@ namespace ZDZCode.Payments.Asaas
             return await PostAsync<CustomerResponse>("/customers", request);
         }
 
-        public async Task<ListCustomersResponse> GetListCustomers(BaseAsaasRequest request = null)
+        public async Task<ListPageResponse<ListCustomersResponse>> GetListCustomers(BaseAsaasRequest request = null)
         {
-            return await GetAsync<ListCustomersResponse>("/customers/", request);
+            return await GetAsync<ListPageResponse<ListCustomersResponse>>("/customers/", request);
         }
 
         public async Task<CustomerResponse> GetRetrieveASingleCustomer(string id, BaseAsaasRequest request = null)

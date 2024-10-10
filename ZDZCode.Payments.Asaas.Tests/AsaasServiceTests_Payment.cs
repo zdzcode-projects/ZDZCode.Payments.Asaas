@@ -1,4 +1,5 @@
 ﻿using AutoFixture;
+using FluentAssertions;
 using ZDZCode.Payments.Asaas.DTO.Payment.Request;
 
 namespace ZDZCode.Payments.Asaas.Tests
@@ -29,6 +30,23 @@ namespace ZDZCode.Payments.Asaas.Tests
 
            Assert.NotNull(result);
 
+        }
+
+        [Fact]
+        public void GetListPayments()
+        {
+            var result = _asaasService.GetListPayments();
+
+            result.Should().NotBeNull();
+            
+        }
+
+        [Fact]
+        public void GetListPaymentsSummaryData()
+        {
+            var result = _asaasService.GetListPaymentsWithSummaryData();
+
+            result.Should().NotBeNull();
         }
     }
 }
