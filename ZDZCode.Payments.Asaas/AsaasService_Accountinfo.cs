@@ -9,10 +9,12 @@ namespace ZDZCode.Payments.Asaas
 {
     public partial class AsaasService : HttpServiceBase
     {
-        public async Task<RetrieveBusinessDataResponse> GetRetrieveBusinessDataResponse(BaseAsaasRequest request = null)
+        public async Task<MyAccountCommercialInfoResponse> GetMyAccountCommercialInfo(BaseAsaasRequest request = null)
         {
-            return await GetAsync<RetrieveBusinessDataResponse>("/myAccount/commercialInfo/", request);
-        }        
+            return await GetAsync<MyAccountCommercialInfoResponse>("/myAccount/commercialInfo", request);
+        }       
+
+
         public async Task<RetrievePersonalizationSettingsResponse> GetRetrievePersonalizationSettingsResponse(BaseAsaasRequest request = null)
         {
             return await GetAsync<RetrievePersonalizationSettingsResponse>("/myAccount/paymentCheckoutConfig/", request);

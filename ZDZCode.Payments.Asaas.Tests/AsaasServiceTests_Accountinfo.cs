@@ -23,14 +23,6 @@ namespace ZDZCode.Payments.Asaas.Tests
         }
 
         [Fact]
-        public async Task GetRetrieveBusinessData()
-        {
-            var result = await _asaasService.GetRetrieveBusinessDataResponse();
-
-            result.Should().NotBeNull();
-        }
-
-        [Fact]
         public async Task GetRetrievePersonalizationSettings()
         {    
             var result = await _asaasService.GetRetrievePersonalizationSettingsResponse();

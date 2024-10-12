@@ -2,7 +2,7 @@
 
 namespace ZDZCode.Payments.Asaas.DTO.Accountinfo.Response
 {
-    public class RetrieveBusinessDataResponse
+    public class MyAccountCommercialInfoResponse
     {
         public string Status { get; set; }
         public string PersonType { get; set; }
