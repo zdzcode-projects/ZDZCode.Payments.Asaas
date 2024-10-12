@@ -2,7 +2,7 @@
 {
     public  class Discount
     {
-        public decimal Value { get; set; }
+        public double Value { get; set; }
         public int DueDateLimitDays { get; set; }
         public string Type { get; set; }
     }

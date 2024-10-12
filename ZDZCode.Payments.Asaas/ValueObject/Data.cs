@@ -1,4 +1,9 @@
 ﻿namespace ZDZCode.Payments.Asaas.ValueObject
 {
-    public  record Data(string Object, string Id);
+    public abstract class Data
+    {
+        public string Object {  get; set; }
+        public string Id { get; set; }
+    }
+    
 }

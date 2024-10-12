@@ -12,6 +12,12 @@
       <Authors>ZDZCode</Authors>
       <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DTO\Subscription\NewFolder\**" />
+    <EmbeddedResource Remove="DTO\Subscription\NewFolder\**" />
+    <None Remove="DTO\Subscription\NewFolder\**" />
+  </ItemGroup>
     <ItemGroup>
         <None Include="..\LICENSE.md" Pack="true" PackagePath="" />
         <None Include="..\logo.png">
@@ -33,6 +39,5 @@
     <ItemGroup>
       <Folder Include="DTO\MobilePhoneRecharge\Request\" />
       <Folder Include="DTO\MobilePhoneRecharge\Response\" />
-      <Folder Include="DTO\Subscription\Request\" />
     </ItemGroup>
 </Project>
