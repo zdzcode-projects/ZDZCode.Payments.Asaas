@@ -36,5 +36,29 @@ namespace ZDZCode.Payments.Asaas.Tests
 
             result.Should().NotBeNull();
         }
+
+        [Fact]
+        public void UpdatePaymentLink()
+        {
+            var request = new PaymentLinkRequest
+            {
+                Name = "Teste",
+                Description = "Pagamento teste",
+                Value = 20,
+                BillingType = "UNDEFINED"
+            };
+
+            var result = _asaasService.UpdatePaymentLink("pl_123", request);
+
+            result.Should().NotBeNull();
+        }
+
+        [Fact]
+        public void DeletePaymentLink()
+        {
+            var result = _asaasService.DeletePaymentLink("pl_123");
+
+            result.Should().NotBeNull();
+        }
     }
 }
