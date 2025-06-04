@@ -30,5 +30,21 @@ namespace ZDZCode.Payments.Asaas
         {
             return await GetAsync<ListPageResponse<PaymentLinkResponse>>("/paymentLinks", request);
         }
+
+        /// <summary>
+        /// Atualiza um link de pagamento existente.
+        /// </summary>
+        public async Task<PaymentLinkResponse> UpdatePaymentLink(string id, PaymentLinkRequest request)
+        {
+            return await PutAsync<PaymentLinkResponse>($"/paymentLinks/{id}", request);
+        }
+
+        /// <summary>
+        /// Remove um link de pagamento existente.
+        /// </summary>
+        public async Task<ValueResponse> DeletePaymentLink(string id, BaseAsaasRequest? request = null)
+        {
+            return await DeleteAsync<ValueResponse>($"/paymentLinks/{id}", request);
+        }
     }
 }
