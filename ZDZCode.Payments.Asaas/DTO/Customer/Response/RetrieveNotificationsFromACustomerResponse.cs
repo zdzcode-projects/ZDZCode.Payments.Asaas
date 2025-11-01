@@ -9,7 +9,7 @@ namespace ZDZCode.Payments.Asaas.DTO.Customer.Response
         public int TotalCount { get; set; }
         public int Limit { get; set; }
         public int Offset { get; set; }
-        public IEnumerable<Notification> Data { get; set; }
+        public IEnumerable<ZDZCode.Payments.Asaas.ValueObject.Notification> Data { get; set; }
 
     }
 }

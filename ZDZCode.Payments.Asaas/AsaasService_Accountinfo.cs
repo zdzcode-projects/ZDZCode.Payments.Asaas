@@ -59,6 +59,22 @@ namespace ZDZCode.Payments.Asaas
         {
             return await PostAsync<UpdateBusinessDataResponse>("/myAccount/commercialInfo/", request);
         }
+
+        /// <summary>
+        /// Recupera informações da conta Asaas.
+        /// </summary>
+        public async Task<MyAccountCommercialInfoResponse> GetMyAccount(BaseAsaasRequest request = null)
+        {
+            return await GetAsync<MyAccountCommercialInfoResponse>("/myAccount/", request);
+        }
+
+        /// <summary>
+        /// Atualiza a configuração do checkout de pagamento.
+        /// </summary>
+        public async Task<PaymentCheckoutConfigResponse> UpdatePaymentCheckoutConfig(PaymentCheckoutConfigRequest request)
+        {
+            return await PostAsync<PaymentCheckoutConfigResponse>("/myAccount/paymentCheckoutConfig/", request);
+        }
  
     }
 }

@@ -29,5 +29,61 @@ namespace ZDZCode.Payments.Asaas
             return await GetAsync<ListPageResponse<DataListPaymentsWithSummaryData>>("/lean/payments", request);
         }
 
+        /// <summary>
+        /// Recupera uma cobrança pelo identificador.
+        /// </summary>
+        public async Task<CreateNewPaymentResponse> GetPaymentById(string id, BaseAsaasRequest request = null)
+        {
+            return await GetAsync<CreateNewPaymentResponse>($"/payments/{id}", request);
+        }
+
+        /// <summary>
+        /// Atualiza uma cobrança existente.
+        /// </summary>
+        public async Task<CreateNewPaymentResponse> UpdatePayment(string id, CreateNewPaymentRequest request)
+        {
+            return await PostAsync<CreateNewPaymentResponse>($"/payments/{id}", request);
+        }
+
+        /// <summary>
+        /// Remove uma cobrança.
+        /// </summary>
+        public async Task<ValueResponse> DeletePayment(string id, BaseAsaasRequest request = null)
+        {
+            return await DeleteAsync<ValueResponse>($"/payments/{id}", request);
+        }
+
+        /// <summary>
+        /// Restaura uma cobrança removida.
+        /// </summary>
+        public async Task<CreateNewPaymentResponse> RestorePayment(string id, BaseAsaasRequest request = null)
+        {
+            return await PostAsync<CreateNewPaymentResponse>($"/payments/{id}/restore", request);
+        }
+
+        /// <summary>
+        /// Confirma o recebimento em dinheiro de uma cobrança.
+        /// </summary>
+        public async Task<CreateNewPaymentResponse> ReceivePaymentInCash(string id, CreateNewPaymentRequest request = null)
+        {
+            return await PostAsync<CreateNewPaymentResponse>($"/payments/{id}/receiveInCash", request);
+        }
+
+        /// <summary>
+        /// Desfaz o recebimento em dinheiro de uma cobrança.
+        /// </summary>
+        public async Task<CreateNewPaymentResponse> UndoReceivedInCash(string id, BaseAsaasRequest request = null)
+        {
+            return await PostAsync<CreateNewPaymentResponse>($"/payments/{id}/undoReceivedInCash", request);
+        }
+
+        /// <summary>
+        /// Simula uma cobrança.
+        /// </summary>
+        public async Task<CreateNewPaymentResponse> SimulatePayment(CreateNewPaymentRequest request)
+        {
+            return await PostAsync<CreateNewPaymentResponse>("/payments/simulate", request);
+        }
+
     }
 }
