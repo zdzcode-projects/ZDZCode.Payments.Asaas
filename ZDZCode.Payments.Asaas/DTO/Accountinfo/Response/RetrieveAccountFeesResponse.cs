@@ -8,9 +8,9 @@ namespace ZDZCode.Payments.Asaas.DTO.Accountinfo.Response
     {
         public Pagamento Payment { get; set; }
         public ZDZCode.Payments.Asaas.ValueObject.Transfer Transfer { get; set; }
-        public Notification Notification { get; set; }
+        public ZDZCode.Payments.Asaas.ValueObject.Notification Notification { get; set; }
         public CreditBureauReport CreditBureauReport { get; set; }
-        public Invoice Invoice { get; set; }
-        public Anticipation Anticipation { get; set; }
+        public ZDZCode.Payments.Asaas.ValueObject.Invoice Invoice { get; set; }
+        public ZDZCode.Payments.Asaas.ValueObject.Anticipation Anticipation { get; set; }
     }
 }
