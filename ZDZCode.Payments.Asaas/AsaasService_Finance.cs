@@ -20,5 +20,21 @@ namespace ZDZCode.Payments.Asaas
         {
             return await GetAsync<FinanceStatisticsResponse>("/finance/getCurrentBalance", request);
         }
+
+        /// <summary>
+        /// Recupera estatísticas de pagamento.
+        /// </summary>
+        public async Task<FinancePaymentStatisticsResponse> GetPaymentStatistics(BaseAsaasRequest request = null)
+        {
+            return await GetAsync<FinancePaymentStatisticsResponse>("/finance/payment/statistics", request);
+        }
+
+        /// <summary>
+        /// Recupera estatísticas de split de pagamentos.
+        /// </summary>
+        public async Task<FinanceSplitStatisticsResponse> GetSplitStatistics(BaseAsaasRequest request = null)
+        {
+            return await GetAsync<FinanceSplitStatisticsResponse>("/finance/split/statistics", request);
+        }
     }
 }

@@ -21,5 +21,13 @@ namespace ZDZCode.Payments.Asaas
         {
             return await GetAsync<PixTransactionResponse>($"/pix/transactions/{id}", request);
         }
+
+        /// <summary>
+        /// Cancela uma transação PIX.
+        /// </summary>
+        public async Task<PixTransactionResponse> CancelPixTransaction(string id, BaseAsaasRequest request = null)
+        {
+            return await PostAsync<PixTransactionResponse>($"/pix/transactions/{id}/cancel", request);
+        }
     }
 }

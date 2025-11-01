@@ -46,5 +46,21 @@ namespace ZDZCode.Payments.Asaas
         {
             return await PutAsync<InvoiceResponse>($"/invoices/{id}", request);
         }
+
+        /// <summary>
+        /// Autoriza uma nota fiscal.
+        /// </summary>
+        public async Task<InvoiceResponse> AuthorizeInvoice(string id, BaseAsaasRequest request = null)
+        {
+            return await PostAsync<InvoiceResponse>($"/invoices/{id}/authorize", request);
+        }
+
+        /// <summary>
+        /// Lista os serviços municipais disponíveis para emissão de notas fiscais.
+        /// </summary>
+        public async Task<ListPageResponse<MunicipalServiceResponse>> ListMunicipalServices(BaseAsaasRequest request = null)
+        {
+            return await GetAsync<ListPageResponse<MunicipalServiceResponse>>("/fiscalInfo/services", request);
+        }
     }
 }

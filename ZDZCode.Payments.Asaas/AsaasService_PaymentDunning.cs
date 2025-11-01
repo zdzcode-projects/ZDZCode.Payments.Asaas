@@ -38,5 +38,45 @@ namespace ZDZCode.Payments.Asaas
         {
             return await PostAsync<ValueResponse>($"/paymentDunnings/{id}/cancel", request);
         }
+
+        /// <summary>
+        /// Simula uma negativação.
+        /// </summary>
+        public async Task<PaymentDunningResponse> SimulatePaymentDunning(PaymentDunningRequest request)
+        {
+            return await PostAsync<PaymentDunningResponse>("/paymentDunnings/simulate", request);
+        }
+
+        /// <summary>
+        /// Recupera o histórico de uma negativação.
+        /// </summary>
+        public async Task<PaymentDunningHistoryResponse> GetPaymentDunningHistory(string id, BaseAsaasRequest request = null)
+        {
+            return await GetAsync<PaymentDunningHistoryResponse>($"/paymentDunnings/{id}/history", request);
+        }
+
+        /// <summary>
+        /// Lista os pagamentos parciais de uma negativação.
+        /// </summary>
+        public async Task<ListPageResponse<DTO.Payment.Response.CreateNewPaymentResponse>> ListPaymentDunningPartialPayments(string id, BaseAsaasRequest request = null)
+        {
+            return await GetAsync<ListPageResponse<DTO.Payment.Response.CreateNewPaymentResponse>>($"/paymentDunnings/{id}/partialPayments", request);
+        }
+
+        /// <summary>
+        /// Lista as cobranças disponíveis para negativação.
+        /// </summary>
+        public async Task<ListPageResponse<DTO.Payment.Response.CreateNewPaymentResponse>> ListPaymentsAvailableForDunning(BaseAsaasRequest request = null)
+        {
+            return await GetAsync<ListPageResponse<DTO.Payment.Response.CreateNewPaymentResponse>>("/paymentDunnings/paymentsAvailableForDunning", request);
+        }
+
+        /// <summary>
+        /// Envia documentos para uma negativação.
+        /// </summary>
+        public async Task<ValueResponse> SendPaymentDunningDocuments(string id, PaymentDunningRequest request)
+        {
+            return await PostAsync<ValueResponse>($"/paymentDunnings/{id}/documents", request);
+        }
     }
 }

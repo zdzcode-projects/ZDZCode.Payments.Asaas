@@ -38,5 +38,13 @@ namespace ZDZCode.Payments.Asaas
         {
             return await PostAsync<ValueResponse>($"/bills/{id}/cancel", request);
         }
+
+        /// <summary>
+        /// Simula um pagamento de conta.
+        /// </summary>
+        public async Task<BillResponse> SimulateBill(BillRequest request)
+        {
+            return await PostAsync<BillResponse>("/bill/simulate", request);
+        }
     }
 }

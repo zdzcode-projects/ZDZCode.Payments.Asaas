@@ -38,5 +38,37 @@ namespace ZDZCode.Payments.Asaas
         {
             return await DeleteAsync<ValueResponse>($"/webhook/{id}", request);
         }
+
+        /// <summary>
+        /// Cria um webhook para eventos de notas fiscais.
+        /// </summary>
+        public async Task<WebhookResponse> CreateInvoiceWebhook(WebhookRequest request)
+        {
+            return await PostAsync<WebhookResponse>("/webhook/invoice", request);
+        }
+
+        /// <summary>
+        /// Lista os webhooks de notas fiscais cadastrados.
+        /// </summary>
+        public async Task<ListPageResponse<WebhookResponse>> ListInvoiceWebhooks(BaseAsaasRequest? request = null)
+        {
+            return await GetAsync<ListPageResponse<WebhookResponse>>("/webhook/invoice", request);
+        }
+
+        /// <summary>
+        /// Cria um webhook para eventos de recarga de celular.
+        /// </summary>
+        public async Task<WebhookResponse> CreateMobilePhoneRechargeWebhook(WebhookRequest request)
+        {
+            return await PostAsync<WebhookResponse>("/webhook/mobilePhoneRecharge", request);
+        }
+
+        /// <summary>
+        /// Lista os webhooks de recarga de celular cadastrados.
+        /// </summary>
+        public async Task<ListPageResponse<WebhookResponse>> ListMobilePhoneRechargeWebhooks(BaseAsaasRequest? request = null)
+        {
+            return await GetAsync<ListPageResponse<WebhookResponse>>("/webhook/mobilePhoneRecharge", request);
+        }
     }
 }

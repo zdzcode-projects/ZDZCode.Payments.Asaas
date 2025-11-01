@@ -46,5 +46,29 @@ namespace ZDZCode.Payments.Asaas
         {
             return await PutAsync<InstallmentResponse>($"/installments/{id}", request);
         }
+
+        /// <summary>
+        /// Lista os pagamentos de um parcelamento.
+        /// </summary>
+        public async Task<ListPageResponse<DTO.Payment.Response.CreateNewPaymentResponse>> ListInstallmentPayments(string id, BaseAsaasRequest request = null)
+        {
+            return await GetAsync<ListPageResponse<DTO.Payment.Response.CreateNewPaymentResponse>>($"/installments/{id}/payments", request);
+        }
+
+        /// <summary>
+        /// Recupera o carnê de um parcelamento.
+        /// </summary>
+        public async Task<ValueResponse> GetInstallmentPaymentBook(string id, BaseAsaasRequest request = null)
+        {
+            return await GetAsync<ValueResponse>($"/installments/{id}/paymentBook", request);
+        }
+
+        /// <summary>
+        /// Estorna um parcelamento.
+        /// </summary>
+        public async Task<ValueResponse> RefundInstallment(string id, BaseAsaasRequest request = null)
+        {
+            return await PostAsync<ValueResponse>($"/installments/{id}/refund", request);
+        }
     }
 }

@@ -22,5 +22,13 @@ namespace ZDZCode.Payments.Asaas
         {
             return await GetAsync<NotificationResponse>($"/notifications/{customerId}", request);
         }
+
+        /// <summary>
+        /// Atualiza as notificações de múltiplos clientes em lote.
+        /// </summary>
+        public async Task<ListPageResponse<NotificationResponse>> UpdateNotificationsBatch(NotificationBatchRequest request)
+        {
+            return await PostAsync<ListPageResponse<NotificationResponse>>("/notifications/batch", request);
+        }
     }
 }

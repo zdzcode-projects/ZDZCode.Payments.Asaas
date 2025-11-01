@@ -2,6 +2,7 @@
 using ZDZCode.Payments.Asaas.Commum;
 using ZDZCode.Payments.Asaas.DTO.Pix.Request;
 using ZDZCode.Payments.Asaas.DTO.Pix.Response;
+using ZDZCode.Payments.Asaas.DTO.PixTransaction.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
@@ -37,6 +38,30 @@ namespace ZDZCode.Payments.Asaas
         public async Task<PixQrCodeResponse> GetPixQrCode(string paymentId, BaseAsaasRequest request = null)
         {
             return await GetAsync<PixQrCodeResponse>($"/payments/{paymentId}/pixQrCode", request);
+        }
+
+        /// <summary>
+        /// Cria um QR Code PIX estático.
+        /// </summary>
+        public async Task<PixQrCodeResponse> CreateStaticPixQrCode(PixQrCodeStaticRequest request)
+        {
+            return await PostAsync<PixQrCodeResponse>("/pix/qrCodes/static", request);
+        }
+
+        /// <summary>
+        /// Decodifica um QR Code PIX.
+        /// </summary>
+        public async Task<PixQrCodeDecodeResponse> DecodePixQrCode(PixQrCodeDecodeRequest request)
+        {
+            return await PostAsync<PixQrCodeDecodeResponse>("/pix/qrCodes/decode", request);
+        }
+
+        /// <summary>
+        /// Realiza um pagamento PIX via QR Code.
+        /// </summary>
+        public async Task<PixTransactionResponse> PayWithPixQrCode(PixQrCodePayRequest request)
+        {
+            return await PostAsync<PixTransactionResponse>("/pix/qrCodes/pay", request);
         }
     }
 }

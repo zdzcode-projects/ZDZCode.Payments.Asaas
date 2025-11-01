@@ -30,5 +30,13 @@ namespace ZDZCode.Payments.Asaas
         {
             return await GetAsync<AnticipationResponse>($"/anticipations/{id}", request);
         }
+
+        /// <summary>
+        /// Simula uma antecipação de recebíveis.
+        /// </summary>
+        public async Task<AnticipationResponse> SimulateAnticipation(AnticipationRequest request)
+        {
+            return await PostAsync<AnticipationResponse>("/anticipations/simulate", request);
+        }
     }
 }
