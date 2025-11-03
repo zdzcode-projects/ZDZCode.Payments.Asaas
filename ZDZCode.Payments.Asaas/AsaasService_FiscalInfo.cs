@@ -4,6 +4,10 @@ using ZDZCode.Payments.Asaas.DTO.FiscalInfo.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a informações fiscais.
+    /// Documentação: https://docs.asaas.com/reference/informacoes-fiscais
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

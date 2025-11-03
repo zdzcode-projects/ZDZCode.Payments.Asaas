@@ -4,6 +4,10 @@ using ZDZCode.Payments.Asaas.DTO.PixTransaction.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a transações PIX.
+    /// Documentação: https://docs.asaas.com/reference/transacoes-pix
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

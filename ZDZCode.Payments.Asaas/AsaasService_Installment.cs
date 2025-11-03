@@ -5,6 +5,10 @@ using ZDZCode.Payments.Asaas.DTO.Installment.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a parcelamentos.
+    /// Documentação: https://docs.asaas.com/reference/parcelamento
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

@@ -7,6 +7,10 @@ using ZDZCode.Payments.Asaas.DTO.Accountinfo.Response.Fees;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a informações da conta.
+    /// Documentação: https://docs.asaas.com/reference/informacoes-conta
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         public async Task<MyAccountCommercialInfoResponse> GetMyAccountCommercialInfo(BaseAsaasRequest request = null)

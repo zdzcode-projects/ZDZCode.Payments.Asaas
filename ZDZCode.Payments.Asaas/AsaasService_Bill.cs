@@ -5,6 +5,10 @@ using ZDZCode.Payments.Asaas.DTO.Bill.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a contas a pagar.
+    /// Documentação: https://docs.asaas.com/reference/contas-pagar
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

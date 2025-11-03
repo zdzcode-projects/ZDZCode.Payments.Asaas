@@ -5,6 +5,10 @@ using ZDZCode.Payments.Asaas.DTO.CreditBureauReport.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a consulta ao Serasa.
+    /// Documentação: https://docs.asaas.com/reference/consulta-serasa
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

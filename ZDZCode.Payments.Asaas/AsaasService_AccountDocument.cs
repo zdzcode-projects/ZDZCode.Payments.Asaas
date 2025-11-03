@@ -5,6 +5,10 @@ using ZDZCode.Payments.Asaas.DTO.AccountDocument.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a documentos de conta.
+    /// Documentação: https://docs.asaas.com/reference/documentos-conta
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

@@ -4,6 +4,10 @@ using ZDZCode.Payments.Asaas.DTO.FinancialTransaction.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a extrato financeiro.
+    /// Documentação: https://docs.asaas.com/reference/extrato
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

@@ -5,6 +5,10 @@ using ZDZCode.Payments.Asaas.DTO.PaymentDunning.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a negativação.
+    /// Documentação: https://docs.asaas.com/reference/negativacao
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>
