@@ -4,6 +4,10 @@ using ZDZCode.Payments.Asaas.DTO.CreditCard.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a cartão de crédito.
+    /// Documentação: https://docs.asaas.com/reference/cartao-credito
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

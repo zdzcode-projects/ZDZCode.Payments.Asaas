@@ -5,6 +5,10 @@ using ZDZCode.Payments.Asaas.DTO.Anticipation.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a antecipação de recebíveis.
+    /// Documentação: https://docs.asaas.com/reference/antecipacao
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

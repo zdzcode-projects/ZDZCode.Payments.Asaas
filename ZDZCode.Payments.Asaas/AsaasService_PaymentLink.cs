@@ -5,6 +5,10 @@ using ZDZCode.Payments.Asaas.DTO.PaymentLink.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a link de pagamento.
+    /// Documentação: https://docs.asaas.com/reference/link-de-pagamento
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

@@ -5,6 +5,10 @@ using ZDZCode.Payments.Asaas.DTO.MobilePhoneRecharge.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a recarga de celular.
+    /// Documentação: https://docs.asaas.com/reference/recarga-celular
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

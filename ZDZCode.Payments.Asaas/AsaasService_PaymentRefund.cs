@@ -5,6 +5,10 @@ using ZDZCode.Payments.Asaas.DTO.PaymentRefund.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a estornos.
+    /// Documentação: https://docs.asaas.com/reference/estorno
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

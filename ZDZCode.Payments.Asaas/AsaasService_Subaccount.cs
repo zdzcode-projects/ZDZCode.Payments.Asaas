@@ -5,6 +5,10 @@ using ZDZCode.Payments.Asaas.DTO.Subaccount.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a subcontas.
+    /// Documentação: https://docs.asaas.com/reference/subcontas
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

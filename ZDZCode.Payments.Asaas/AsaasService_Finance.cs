@@ -3,6 +3,10 @@ using ZDZCode.Payments.Asaas.DTO.Finance.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a informações financeiras.
+    /// Documentação: https://docs.asaas.com/reference/financeiro
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

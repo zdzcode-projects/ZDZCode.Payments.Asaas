@@ -4,6 +4,10 @@ using ZDZCode.Payments.Asaas.DTO.PaymentDocument.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a documentos de cobrança.
+    /// Documentação: https://docs.asaas.com/reference/documentos-cobranca
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>

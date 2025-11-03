@@ -5,6 +5,10 @@ using ZDZCode.Payments.Asaas.DTO.PaymentSplit.Response;
 
 namespace ZDZCode.Payments.Asaas
 {
+    /// <summary>
+    /// Serviço parcial para operações relacionadas a split de pagamentos.
+    /// Documentação: https://docs.asaas.com/reference/split
+    /// </summary>
     public partial class AsaasService : HttpServiceBase
     {
         /// <summary>
